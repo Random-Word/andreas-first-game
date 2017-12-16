@@ -5,7 +5,7 @@ app = Flask(__name__)
 def game():
     return render_template('game.html', name="Andrea's Game")
 
-@app.route('/new')
-def a():
-    return "This is something new!"
+@app.route('/new/<thing>')
+def a(thing):
+    return "You've created a new {}".format(thing)
 
